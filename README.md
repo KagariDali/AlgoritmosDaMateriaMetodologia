@@ -1,21 +1,63 @@
-# AlgoritmosDaMateriaMetodologia
-Algoritmo base utilizado para escrita do artigo: "Estudo Comparativo de Desempenho e Legibilidade entre as Linguagens Java, Python, C e JavaScript na Implementação de Fundamentos de Algoritmos". Feito no intuito de melhorar a forma como eu escrevo meus artigos e principalmente, conseguir nota para uma das aulas da faculdade engenharia de software.
+# Algoritmo Base
 
-A escolha do algoritmo baseia-se na necessidade de utilizar estruturas fundamentais da
-programac¸ ˜ao, como estruturas de decis˜ao, repetic¸ ˜ao e operac¸ ˜oes de entrada e sa´ıda de
-dados. Esses elementos s˜ao essenciais no ensino e na pr´atica da programac¸ ˜ao, sendo am-
-plamente utilizados na resoluc¸ ˜ao de problemas computacionais. Dessa forma, a adoc¸ ˜ao
-de um algoritmo que contemple essas estruturas permite uma comparac¸ ˜ao mais repre-
-sentativa entre as linguagens, uma vez que explora caracter´ısticas comuns a diferentes
-contextos de desenvolvimento.
-O algoritmo utilizado no experimento foi desenvolvido com o objetivo de reunir
-estruturas fundamentais da programac¸ ˜ao em uma ´unica implementac¸ ˜ao. O procedimento
-recebe como entrada a quantidade de valores a serem processados, gera uma sequˆencia
-de n´umeros inteiros entre 0 e 100 por meio de uma express˜ao matem´atica determin´ıstica,
-calcula a soma e a m´edia dos valores gerados e, por fim, verifica se a m´edia obtida ´e
-superior a 50.
-A gerac¸ ˜ao dos valores ´e realizada pela express˜ao (37 × i + 11) mod 101, na qual
-o ´ındice da iterac¸ ˜ao determina o valor produzido. Dessa forma, o algoritmo permite con-
-trolar o tamanho da entrada e executar a mesma sequˆencia de operac¸ ˜oes nas diferentes
-linguagens avaliadas. O pseudoc´odigo utilizado como referˆencia para as implementac¸ ˜oes
-´e apresentado no Algoritmo 1
+A escolha do algoritmo baseia-se na necessidade de utilizar estruturas
+fundamentais da programação, como estruturas de decisão, repetição e
+operações de entrada e saída de dados. Esses elementos são essenciais no
+ensino e na prática da programação, sendo amplamente utilizados na
+resolução de problemas computacionais.
+
+Dessa forma, a adoção de um algoritmo que contemple essas estruturas
+permite uma comparação mais representativa entre as linguagens, uma vez
+que explora características comuns a diferentes contextos de
+desenvolvimento.
+
+## Descrição
+
+O algoritmo utilizado no experimento foi desenvolvido com o objetivo de
+reunir estruturas fundamentais da programação em uma única implementação.
+
+O procedimento recebe como entrada a quantidade de valores a serem
+processados, gera uma sequência de números inteiros entre `0` e `100`
+por meio de uma expressão matemática determinística, calcula a soma e a
+média dos valores gerados e, por fim, verifica se a média obtida é
+superior a `50`.
+
+A geração dos valores é realizada pela expressão:
+
+`(37 × i + 11) mod 101`
+
+Na qual o índice da iteração determina o valor produzido. Dessa forma,
+o algoritmo permite controlar o tamanho da entrada e executar a mesma
+sequência de operações nas diferentes linguagens avaliadas.
+
+## Pseudocódigo
+
+```text
+Algoritmo "MediaValoresCalculados"
+
+var
+    tamanho : inteiro
+    i       : inteiro
+    valor   : inteiro
+    soma    : inteiro longo
+    media   : inteiro
+
+início
+    leia(tamanho)
+    soma ← 0
+
+    para i de 0 até tamanho - 1 faça
+        valor ← (37 × i + 11) mod 101
+        soma ← soma + valor
+    fimpara
+
+    media ← soma div tamanho
+
+    escreva("Média: ", media)
+
+    se media > 50 então
+        escreva("Aprovado")
+    senão
+        escreva("Reprovado")
+    fimse
+fim
